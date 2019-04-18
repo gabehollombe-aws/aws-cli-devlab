@@ -19,7 +19,6 @@ For this lab, we'll use the AWS Cloud 9 web-based IDE to provide us with a termi
 3. Find the 'AWS CLI DevLab Cloud9 Env' entry and click the 'Open IDE' button
 4. After the interface loads, find the tab with the Terminal and click to maximize it
 
-[Image: Cloud9MaximizeTerminal.png]
 ![Cloud 9 Maximize Terminal](https://raw.githubusercontent.com/gabehollombe-aws/aws-cli-devlab/master/Cloud9MaximizeTerminal.png)
 
 
