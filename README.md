@@ -142,7 +142,7 @@ Often, we're not interested in all of the data returned by the API endpoints and
 Using the same example from the filtering section above, let's use the `--query` argument to narrow down what information we see:
 
 ```
-aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows" "Name=root-device-type,Values=ebs" —query "Images[0:10].{name: Name, id: ImageId}" 
+aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows" "Name=root-device-type,Values=ebs" --query "Images[0:10].{name: Name, id: ImageId}" 
 ```
 
 You can think of this query as saying “Show me all of the values in the array returned by the 'Images' key at the top level. Take a slice of only the first ten items. Then, for each image item, take the Name field and return it under the 'name' key, and take the ImageId field and return it under the 'id' key.
@@ -159,7 +159,7 @@ Sometimes it can be a lot easier to read the output from AWS CLI commands if we 
 Take the same command we used directly above, but change the output format to a table with `--output=table`
 
 ```
-aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows" "Name=root-device-type,Values=ebs" —query "Images[0:10].{name: Name, id: ImageId}" --output=table
+aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows" "Name=root-device-type,Values=ebs" --query "Images[0:10].{name: Name, id: ImageId}" --output=table
 ```
 
 Doesn't that look prettier?
